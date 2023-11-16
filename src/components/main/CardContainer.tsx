@@ -15,7 +15,7 @@ export function Card({ products }: CardProps) {
       </div>
       <p>{ products.description }</p>
       <div className="buy">
-        <Image src={ Buy } alt={"Imagem de uma sacola de compras"} width={40} height={40} />
+        <Image src={ Buy } alt={"Imagem de uma sacola de compras"} width={18} height={18} />
         <span>COMPRAR</span>
       </div>
     </div>

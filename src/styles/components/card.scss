@@ -1,0 +1,62 @@
+.card-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 1.125rem 0.5rem 3rem;
+  background: $backgroundColor;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
+
+  & img {
+      object-fit: contain;
+  }
+
+}
+
+.name-and-price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: $regularFontSize;
+  line-height: $bigFontHeith;
+
+  & p:last-child {
+    padding: 0.25rem 0.5rem;
+    background-color: $fontColor;
+    color: $backgroundColor;
+    font-weight: $extraBoldFontWheigth;
+    border-radius: 5px;
+  }
+}
+
+.buy {
+  padding: 0.5rem 0;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: $principalColor;
+  color: $backgroundColor;
+  font-weight: $boldFontWheigth;
+  cursor: pointer;
+  border-radius: 0px 0px 8px 8px;
+
+  & span {
+    background: $principalColor;
+    padding-left: 5px;
+  }
+
+  & img {
+    background: $principalColor;
+    padding-right: 5px;
+  }
+}

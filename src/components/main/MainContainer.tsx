@@ -15,7 +15,7 @@ export function Main() {
   return (
     <div className="main-container">
       { !isLoading ? data?.products.map(produtos => (
-        <Card products={ produtos } key={ produtos.id } />
+        <Card products={produtos} key={ produtos.id } />
       )) : "Something went wrong" }
     </div>
   )
