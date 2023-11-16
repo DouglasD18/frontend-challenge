@@ -1,5 +1,6 @@
 import { Footer } from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
+import { Main } from "@/components/main/MainContainer";
 import { Provider } from "@/context/Provider";
 import { queryClient } from "@/services/queryClient";
 import Head from "next/head";
@@ -16,6 +17,7 @@ export default function Page() {
     <QueryClientProvider client={ queryClient }>
       <Provider>
         <Header />
+        <Main />
         <Footer />
       </Provider>
     </QueryClientProvider>

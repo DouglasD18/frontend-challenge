@@ -1,4 +1,4 @@
 export type Response = {
   count: number
-  products: Products
+  products: Products[]
 }
