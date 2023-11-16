@@ -35,9 +35,17 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  width: 4vw;
+  width: 12vw;
   height: 40%;
   font-weight: $extraBoldFontWheigth;
   font-size: 18px;
   padding: 0 0.8%;
+
+}
+
+@media (min-width: 1000px) {
+  .cart-container {
+    width: 4vw;
+    height: 45%;
+  }
 }
