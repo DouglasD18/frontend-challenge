@@ -1,3 +1,4 @@
+import Header from "@/components/header/Header";
 import Head from "next/head";
 
 export default function Page() {
@@ -9,7 +10,7 @@ export default function Page() {
       <link rel="icon" imageSrcSet="@/../public/favicon.ico" />
     </Head>
     <main>
-      Hello, Next.js!
+      <Header />
     </main>
   </>
 }

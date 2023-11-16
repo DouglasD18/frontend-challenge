@@ -1,11 +1,13 @@
 @import "variables.scss";
+@import "header/header.scss";
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: $regularFont;
-  font-size: 22px;
+  font-family: $fontFamily;
+  font-weight: $regularFontWheigth;
+  font-size: $regularFontSize;
   background-color: $backgroundColor;
 }
 

@@ -1,6 +1,43 @@
 @import "../variables.scss";
 
-header {
-  display: flex;
+.header-container {
+  width: 100vw;
+  height: 10vh;
   background-color: $principalColor;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3%;
+}
+
+.logo {
+  background-color: $principalColor;
+  color: $principalFooterColor;
+
+  & span {
+    background-color: $principalColor;
+    padding: 0 1%;
+    font-size: 20px;
+    font-weight: $lightFontWheigth;
+  }
+
+  & span:first-child {
+    font-size: $extraFontSize;
+    font-weight: $boldFontWheigth;
+  }
+}
+
+.cart-container {
+  background-color: $backgroundColor;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 4vw;
+  height: 40%;
+  font-weight: $extraBoldFontWheigth;
+  font-size: 18px;
+  padding: 0 0.8%;
 }
