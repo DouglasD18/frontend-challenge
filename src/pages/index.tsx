@@ -1,4 +1,5 @@
 import Header from "@/components/header/Header";
+import { Provider } from "@/context/Provider";
 import Head from "next/head";
 
 export default function Page() {
@@ -9,8 +10,8 @@ export default function Page() {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" imageSrcSet="@/../public/favicon.ico" />
     </Head>
-    <main>
+    <Provider>
       <Header />
-    </main>
+    </Provider>
   </>
 }
