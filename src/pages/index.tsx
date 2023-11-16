@@ -1,7 +1,9 @@
 import { Footer } from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import { Provider } from "@/context/Provider";
+import { queryClient } from "@/services/queryClient";
 import Head from "next/head";
+import { QueryClientProvider } from "react-query";
 
 export default function Page() {
   return <>
@@ -11,9 +13,11 @@ export default function Page() {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" imageSrcSet="@/../public/favicon.ico" />
     </Head>
-    <Provider>
-      <Header />
-      <Footer />
-    </Provider>
+    <QueryClientProvider client={ queryClient }>
+      <Provider>
+        <Header />
+        <Footer />
+      </Provider>
+    </QueryClientProvider>
   </>
 }
