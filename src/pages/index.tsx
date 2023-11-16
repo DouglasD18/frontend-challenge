@@ -1,3 +1,4 @@
+import { Footer } from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import { Provider } from "@/context/Provider";
 import Head from "next/head";
@@ -12,6 +13,7 @@ export default function Page() {
     </Head>
     <Provider>
       <Header />
+      <Footer />
     </Provider>
   </>
 }

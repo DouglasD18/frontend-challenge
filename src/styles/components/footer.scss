@@ -1,0 +1,16 @@
+footer {
+  bottom: 0;
+  position: fixed;
+  width: 100vw;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: $regularFontWheigth;
+  font-size: $lightFontHeigth;
+  background-color: $principalFooterColor;
+
+  & p {
+    background-color: $principalFooterColor;
+  }
+}
