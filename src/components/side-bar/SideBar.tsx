@@ -68,9 +68,9 @@ export function SideBar() {
           <div key={ product.id } className="product-box">
               <Image src={product.photo} alt={ product.name + " foto" } width={80} height={80} />
               <span>{product.name}</span>
-              <div>
+              <div className="product-qtd">
                 <button
-                  className="minor"
+                  className="minus"
                   onClick={() => onMinus(product)}
                 >
                   -

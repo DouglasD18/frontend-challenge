@@ -21,7 +21,6 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  font-size: $regularFontSize;
   line-height: $bigFontHeith;
 
   & p:last-child {
@@ -31,6 +30,13 @@
     font-weight: $extraBoldFontWheigth;
     border-radius: 5px;
   }
+}
+
+.description {
+  color: $fontColor;
+  font-size: $lightFontSize;
+  font-weight: $lightFontWheigth;
+  line-height: $lightFontHeigth;
 }
 
 .buy {

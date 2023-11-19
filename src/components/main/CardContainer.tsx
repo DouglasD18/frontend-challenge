@@ -43,7 +43,7 @@ export function Card({ product }: CardProps) {
           <p>{ product.name }</p>
           <p>R${ parseFloat(product.price.toString().replace(",", "")) }</p>
       </div>
-      <p>{ product.description }</p>
+      <p className="description">{ product.description }</p>
       <button className="buy" onClick={ () => onClick() }>
         <Image src={ Buy } alt={"Imagem de uma sacola de compras"} width={18} height={18} />
         <span>COMPRAR</span>

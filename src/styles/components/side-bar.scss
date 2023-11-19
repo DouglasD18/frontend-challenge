@@ -61,9 +61,10 @@
   background: $backgroundColor;
   width: 80%;
   border-radius: 8px;
+
   position: relative;
 
-  .little-close {
+  & .little-close {
     position: absolute;
     top: -9px;
     right: -9px;
@@ -72,32 +73,54 @@
     background-color: $black;
     border-radius: 50%;
   }
+}
 
-  button {
+.product-qtd {
+  border-radius: 8px;
+  border: 0.3px solid $border-color;
+  padding: 6px 6px;
+  display: flex;
+  align-items: center;
+
+  & span {
+    padding: 2px 5px;
+  }
+
+  & button {
     border: none;
     outline: none;
-    padding: 2px 8px;
+    padding: 2px 5px;
     font-size: $regularFontSize;
     cursor: pointer;
   }
-  .minus {
-    border-right: 1px solid $principalFooterColor;
+  
+  & .minus {
+    border-right: 1px solid $border-color;
   }
-  .plus {
-    border-left: 1px solid $principalFooterColor;
+
+  & .plus {
+    border-left: 1px solid $border-color;
   }
 }
 
 .total {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  margin-top: auto;
   background-color: $principalColor;
-  font-size: $bigFontSize;
-  font-weight: $extraBoldFontWheigth;
-  padding: 0 50px;
-  bottom: 13vh;
+  padding: 5px 0;
+  position: absolute;
+  bottom:0;
+  margin-bottom: 14vh;
+  padding: 0 5%;
+
+  & p {
+    font-size: $bigFontSize;
+    font-weight: $extraBoldFontWheigth;
+    line-height: $regularFontHeigth;
+  }
 }
 
 .aside-footer {
