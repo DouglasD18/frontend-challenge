@@ -1,6 +1,7 @@
 import { createContext } from 'react';
 
 export interface CartProduct {
+  id: number;
   qtd: number;
   photo: string;
   price: string;
@@ -12,6 +13,8 @@ export interface IContext {
   setCount: React.Dispatch<React.SetStateAction<number>>;
   cartProducts: CartProduct[];
   setCartProducts: React.Dispatch<React.SetStateAction<CartProduct[]>>;
+  openAside: boolean;
+  setOpenAside: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const MyContext = createContext<IContext | undefined>(undefined);

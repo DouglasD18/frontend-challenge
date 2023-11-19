@@ -1,5 +1,3 @@
-@import "../variables.scss";
-
 .header-container {
   width: 100vw;
   height: 10vh;
@@ -40,7 +38,7 @@
   font-weight: $extraBoldFontWheigth;
   font-size: 18px;
   padding: 0 0.8%;
-
+  cursor: pointer;
 }
 
 @media (min-width: 1000px) {

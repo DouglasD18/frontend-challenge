@@ -8,12 +8,15 @@ interface ProviderProps {
 export function Provider({ children }: ProviderProps) {
   const [count, setCount] = useState<number>(0);
   const [cartProducts, setCartProducts] = useState<CartProduct[]>([]);
+  const [openAside, setOpenAside] = useState<boolean>(false);
 
   const states = {
     count,
     setCount,
     cartProducts,
-    setCartProducts
+    setCartProducts,
+    openAside,
+    setOpenAside
   }
 
   return (

@@ -13,6 +13,7 @@ export function Card({ product }: CardProps) {
 
   const onClick = () => {
     const cartProduct: CartProduct = {
+      id: product.id,
       qtd: 1,
       photo: product.photo,
       price: product.price,

@@ -4,7 +4,11 @@ import { useContext } from "react";
 import MyContext from "@/context/MyContext";
 
 export default function Header() {
-  const { count } = useContext(MyContext)!;
+  const { count, setOpenAside } = useContext(MyContext)!;
+
+  const onClick = () => {
+    setOpenAside(true);
+  }
 
   return (
     <header className="header-container">
@@ -12,7 +16,7 @@ export default function Header() {
         <span>MKS</span>
         <span>Sistemas</span>
       </div>
-      <div className="cart-container">
+      <div className="cart-container" onClick={() => onClick()}>
         <Image src={CartImage} alt={"Imagem de um carrinho de compras."} width={15} height={15} />
         <span>{ count ? count : 0 }</span>
       </div>
