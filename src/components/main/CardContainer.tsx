@@ -20,20 +20,25 @@ export function Card({ product }: CardProps) {
       name: product.name
     }
 
-    if (typeof cartProducts !== "undefined") {
-      cartProducts.push(cartProduct);
-      setCartProducts(cartProducts);
+    if (!cartProducts.find(product => product.id === cartProduct.id)) {
+      if (typeof cartProducts !== "undefined") {
+        cartProducts.push(cartProduct);
+        setCartProducts(cartProducts);
+      } else {
+        setCartProducts([cartProduct]);
+      }
+  
+      if (!count) {
+        setCount(1);
+      } else {
+        setCount(count + 1);
+      }
+      
+      ShowToast({ message: `${product.name} adicionado ao carrinho!`, type: "success"})
     } else {
-      setCartProducts([cartProduct]);
+      ShowToast({ message: `${product.name} já foi adicionado ao carrinho!`, type: "info" })
     }
 
-    if (!count) {
-      setCount(1);
-    } else {
-      setCount(count + 1);
-    }
-    
-    ShowToast({ message: `${product.name} adicionado ao carrinho!`, type: "success"})
   }
 
   return (
