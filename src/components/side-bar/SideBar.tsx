@@ -5,9 +5,10 @@ import MyContext, { CartProduct } from "@/context/MyContext";
 import { CSSProperties } from "react";
 
 export function SideBar() {
-  const { cartProducts, setCartProducts, openAside, setOpenAside } = useContext(MyContext)!;
+  const { cartProducts, setCartProducts, openAside, setOpenAside, setCount, count } = useContext(MyContext)!;
 
   const closeProduct = (product: CartProduct): void => {
+    const qtd = product.qtd;
     product.qtd = 0;
 
     cartProducts.map(element => {
@@ -18,6 +19,7 @@ export function SideBar() {
 
     const newCart = cartProducts.filter(product => product.qtd > 0);
     setCartProducts(newCart);
+    setCount(count - qtd);
   }
 
   const onPlus = (product: CartProduct): void => {
@@ -30,6 +32,7 @@ export function SideBar() {
 
     const newCart = cartProducts.filter(product => product.qtd > 0);
     setCartProducts(newCart);
+    setCount(count + 1);
   }
 
   const onMinus = (product: CartProduct): void => {
@@ -42,6 +45,7 @@ export function SideBar() {
 
     const newCart = cartProducts.filter(product => product.qtd > 0);
     setCartProducts(newCart);
+    setCount(count - 1);
   }
 
   const closeAside = () => {
